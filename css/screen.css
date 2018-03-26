@@ -152,12 +152,12 @@ figcaption {
 hr {
   border: 0;
   height: 1px;
-  background: #5051DB;
+  background: #6c6c75;
   margin: 0 0 24px;
 }
 
 a {
-  color: #3E3EA8;
+  color: #6c6c75;
   transition: all .1s ease-in-out;
 }
 
@@ -381,6 +381,14 @@ a:hover, a:focus {
   font-size: 16px;
 }
 
+.c-nav--meta .c-nav__link--meta, .c-nav--meta .c-nav__link--meta:visited, .c-nav--meta .c-nav__link--meta:active {
+  color: #6c6c75;
+}
+
+.c-nav__link:hover, .c-nav__link:focus {
+  color: #5051db;
+}
+
 .c-nav__link--meta, .c-nav__link--meta:visited, .c-nav__link--meta:active {
   color: #6c6c75;
 }
@@ -391,11 +399,31 @@ a:hover, a:focus {
 
 @media (min-width: 768px) {
   .c-nav__list {
+    display: -webkit-flex;
     display: flex;
-    margin: -8px -16px
+    display: -ms-flexbox;
+    margin: -8px -16px;
   }
   .c-nav__link {
     padding: 8px 16px;
+  }
+}
+
+.c-header__nav {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .c-header {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .c-header__nav {
+    display: block;
   }
 }
 
